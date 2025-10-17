@@ -27,6 +27,12 @@ export default function Batsman(){
     return(
         <div>
             <h3>Player: Bangladeshi Batsman</h3>
+            {
+                runs>=50 && <p>congratulations You Score Half century </p>
+            }
+            {
+                runs>=100 && <p>congratulations You Score  century </p>
+            }
             <h4>Score: {runs}</h4>
             <button onClick={handleSingle}>Singles</button>
             <button onClick={fourRuns}>Fours</button>
