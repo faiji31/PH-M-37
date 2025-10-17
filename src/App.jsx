@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import Counter from './counter'
-
+import Batsman from './batsman'
 function App() {
   function handleClick(){
     alert("Button Clicked!")
@@ -20,6 +20,7 @@ function App() {
       <button onClick={handleClick}>Click Me</button>
        <button onClick={handleClick2}>Click M2</button>
        <Counter></Counter>
+       <Batsman></Batsman>
       
       
     </>
