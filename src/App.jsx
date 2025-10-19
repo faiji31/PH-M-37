@@ -5,8 +5,12 @@ import './App.css'
 import Users  from './uses'
 import Counter from './counter'
 import Batsman from './batsman'
+import Friends  from './friends'
+import { Suspense } from 'react'
 
 const fetchUsers =fetch("https://jsonplaceholder.typicode.com/users").then(res=>res.json())
+
+const fetchFriends =fetch("https://jsonplaceholder.typicode.com/comments").then(res=>res.json())
 
 
 function App() {
@@ -25,7 +29,13 @@ function App() {
        <button onClick={handleClick2}>Click M2</button>
        <Counter></Counter>
        <Batsman></Batsman>
-       <Users></Users>
+      <Suspense fallback={<h3>Loading.....</h3>}>
+        <Users fetchUsers ={fetchUsers}></Users>
+      </Suspense>
+      
+      <Suspense fallback={<h3>Loading Friends List....</h3>}>
+        <Friends fetchFriends={fetchFriends}></Friends>
+      </Suspense>
        
       
       
