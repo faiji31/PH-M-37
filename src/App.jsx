@@ -7,6 +7,7 @@ import Counter from './counter'
 import Batsman from './batsman'
 import Friends  from './friends'
 import { Suspense } from 'react'
+import Friend from './friend'
 
 const fetchUsers =fetch("https://jsonplaceholder.typicode.com/users").then(res=>res.json())
 
