@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Useas  from './uses'
+import Users  from './uses'
 import Counter from './counter'
 import Batsman from './batsman'
 
@@ -25,6 +25,7 @@ function App() {
        <button onClick={handleClick2}>Click M2</button>
        <Counter></Counter>
        <Batsman></Batsman>
+       <Users></Users>
        
       
       
